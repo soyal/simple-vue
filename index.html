@@ -9,7 +9,8 @@
 <body>
   <div id="app">
     <input type="text" v-model="test">
-    <p>{{test}}}</p>
+    <p>{{test}}</p>
+    <p>{{test}}</p>
     <button type="button" v-on:click="sayHello">say hello</button>
   </div>
 
@@ -21,13 +22,13 @@
     new SVue({
       el: '#app',
       data: {
-        test: 'this is test text',
-        ha: 'hahahahahahahaha'
+        test: '测试',
+        aaa: 'hahahahahahahaha'
       },
       methods: {
         sayHello: function() {
           alert('hello');
-          alert(this.ha);
+          alert(this.aaa);
         }
       }
     })
