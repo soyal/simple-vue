@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Simple Vue</title>
+</head>
+<body>
+  <div id="app">
+    <input type="text" v-model="test">
+    <p>{{test}}}</p>
+    <button type="button" v-on:click="sayHello">say hello</button>
+  </div>
+
+  <script type="text/javascript" src="./lib/simple-vue.js"></script>
+  <script src="./lib/observer.js"></script>
+  <script src="./lib/compiler.js"></script>
+  <script src="./lib/watcher.js"></script>
+  <script>
+    new SVue({
+      el: '#app',
+      data: {
+        test: 'this is test text',
+        ha: 'hahahahahahahaha'
+      },
+      methods: {
+        sayHello: function() {
+          alert('hello');
+          alert(this.ha);
+        }
+      }
+    })
+  </script>
+</body>
+</html>
